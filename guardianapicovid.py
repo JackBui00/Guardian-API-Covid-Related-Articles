@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 endpoint = "https://content.guardianapis.com/search"
 base_params = {
     "q": "covid",
-    "api-key": "KEY_GOES_HERE"
+    "api-key": "KEY_GOES_HERE" ##Use your own API that you can request for free from the guardian after inputting basic inforamtion 
 }
 
 # Loop over each month in 2022 and generate the parameters
@@ -39,6 +39,7 @@ for month, params in params_by_month.items():
     # Print the result
     print(f"Total number of COVID-related articles in {month}: {total_articles}")
 
+    ## prints a new graph for every month that's added to the inforamtion, so there are 12 total graphs 
     plt.plot(total_articles_by_month)
     plt.title("Number of COVID-Related Articles in The Guardian, 2022")
     plt.xlabel("Month")
